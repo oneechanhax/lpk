@@ -1,8 +1,9 @@
 # lpk
  a "Little" package manager
 
-Concept, written in c++
-will follow apk(alpine package keeper) style.
+Concept, written in c++20   
+will follow apk(alpine package keeper) style of usage and internal design.   
+coroutines can be utilixed to follow that design. flow from web directly into decompressor, from decompressor into signature checker and filesystem, once fully unpacked without signature errors, move unpacked files to desired locations. this should be instant as its a move not a copy or a write, its already on disk.
 
 ### lpk add [package]   
 ### lpk del [package]    
